@@ -41,7 +41,7 @@ class DiscordRequests:
         headers = self.headers.copy()
         headers['content-type'] = 'application/json'
 
-        url = 'https://discord.com/api/v9/users/@me/relationships'
+        url = self.URI + '/users/@me/relationships'
         resp = self._session.get(headers=self.headers,url=url)
         
         # Check before we do anything
